@@ -19,6 +19,7 @@
       background-color: #06c;
       color: white;
       padding: 12px 8px;
+      text-align: left;
     }
     table tr, table th {
       border-bottom: 1px solid lightgray;
@@ -29,6 +30,9 @@
     table tr:hover {
       background-color: #d7defc;
     }
+    td {
+      padding: 8px;
+    }
     .row {
       display: flex;
       flex-flow: row;
@@ -36,7 +40,8 @@
       margin: 1rem;
     }
     #pageLabel {
-      align-self: center;
+      position: relative;
+      bottom: -10px;
     }
     footer {
       position: absolute;
@@ -70,11 +75,17 @@
     }
     .cb-logo {
       position: absolute;
-      right: -40px;
-      top: -40px;
+      right: -20px;
+      top: -20px;
     }
     .relative {
       position: relative;
+    }
+    #switchSearchContainer {
+      align-self: end;
+    }
+    #questionMark {
+      width: 15px;
     }
   </style>
 </head>
@@ -103,15 +114,15 @@
       <div id='advancedSearch'>
         <label class="block-label">
           Enter CBQL query
+          <a href="https://codebeamer.com/cb/wiki/871101" target="blank" title="Codebeamer cbQL documentation">
+            <img id="questionMark" src="img/questionMark.svg">
+          </a>
         </label>
         <input id='cbqlQuery' class="miro-input miro-input--primary miro-input--small"
         placeholder="e.g. tracker.id in (12345)">
-        <a href="https://codebeamer.com/cb/wiki/871101" target="blank" title="Codebeamer cbQL documentation">
-          <img src="img/questionMark.svg">
-        </a>
       </div>
     </div>
-    <div>
+    <div id='switchButtonContainer'>
       <button id='switchSearchButton' class="miro-btn miro-btn--primary miro-btn--small"></button>
     </div>
   </div>
