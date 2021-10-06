@@ -1,3 +1,5 @@
+This is a clone from [this](https://github.com/max-poprawe/codebeamer-miro/) repository. I copied it to make use of the github pages to host the plugin. At least that's what I think I'm doing.
+
 # Miro plugin: codeBeamer integration
 
 This is a codeBeamer <-> Miro integration web-plugin to be installed on Miro.\
