@@ -81,7 +81,7 @@
     .relative {
       position: relative;
     }
-    #switchSearchContainer {
+    #switchButtonContainer {
       align-self: end;
     }
     #questionMark {
@@ -91,39 +91,8 @@
       max-height: 60%;
       overflow: auto;
     }
-    .tooltip {
-      position: relative;
-    }
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-    .tooltiptext {
-      visibility: hidden;
-      width: fit-content;
-      background-color: #06c;
-      color: white;
-      text-align: center;
-      border-radius: 12px;
-      padding: 8px 2px;
-      opacity: 0;
-      transition: opacity 1s;
-
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      transition: translateX(-50%);
-      z-index: 10000;
-    }
-    .tooltiptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #06c transparent transparent transparent;
+    .w-20px {
+      width: 20px;
     }
   </style>
 </head>
@@ -170,10 +139,7 @@
   <footer>
     <button id='importButton' class="miro-btn miro-btn--primary miro-btn--small">
       <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M336 176h40a40 40 0 0140 40v208a40 40 0 01-40 40H136a40 40 0 01-40-40V216a40 40 0 0140-40h40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 272l80 80 80-80M256 48v288"/></svg>
-      <span class="tooltip">
-        <span class="tooltiptext">Imported trackers will be generated in the center of your screen.</span>
-        <span id='importButtonText'></span>
-      </span>
+      <span id='importButtonText'></span>
     </button>
     <button id='synchButton' class="miro-btn miro-btn--primary miro-btn--small">
       <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M288 193s12.18-6-32-6a80 80 0 1080 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="28" d="M256 149l40 40-40 40"/><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
