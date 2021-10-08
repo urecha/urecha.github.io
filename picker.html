@@ -32,6 +32,10 @@
     }
     td {
       padding: 2px;
+      max-width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .row {
       display: flex;
@@ -91,8 +95,11 @@
       max-height: 60%;
       overflow: auto;
     }
-    .w-20px {
+    .imported-check {
       width: 20px;
+      position: relative;
+      left: -1px;
+      top: 2px;
     }
   </style>
 </head>
