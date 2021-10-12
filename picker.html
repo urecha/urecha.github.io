@@ -75,6 +75,46 @@
   </footer>
 
   <script src="picker.js"></script>
+  <script>
+    /**
+ * Imports all items for a certain tracker. At your own discretion, since that takes time.
+ * @param trackerId 
+ */
+ async function importAllItemsForTracker() {
+  let trackerId = Store.getInstance().getLocalSetting(LocalSetting.SELECTED_TRACKER);
+  miro.showNotification(`Importing all items from tracker ${trackerId}...`);
+  document.getElementById('importAllButton')?.classList.add('button-loading');
+  
+  //get all items
+  //TODO filter out already imported ones
+  let queryReturn = await getCodeBeamerCbqlResult(`tracker.id IN ${trackerId}`);
+  
+  if(queryReturn.message) {
+    miro.showErrorNotification(`Failed importing all items: ${queryReturn.message}`);
+    document.getElementById('importAllButton')?.classList.remove('button-loading');
+    return;
+  } else {
+    // query was successfull
+    let totalItems = queryReturn.total;
+    
+    if(window.confirm(`Import ${totalItems} items from codeBeamer?`)) {
+      let itemIds = queryReturn.items.map(i => i.id);
+      //* alternative to filtering out in cbql
+      let alreadySynchedItemIds = await getAllSynchedCodeBeamerCardItemIds();
+      
+      console.log("Unfiltered:", itemIds);
+      itemIds.filter(i => !alreadySynchedItemIds.includes(i));
+      
+      console.log("Filtered from already imported ones:", itemIds);
+      //TODO remove confirm
+      if(window.confirm('[Dev] ok?')) await syncWithCodeBeamer(itemIds);
+      
+      miro.board.ui.closeModal();
+    }
+    document.getElementById('importAllButton')?.classList.remove('button-loading');
+  }
+}
+  </script>
 </body>
 
 </html>
