@@ -2,6 +2,7 @@ body {
 	margin: auto;
 	padding: 2rem;
 	background-color: transparent;
+	--miro-blue: #4262ff;
 }
 #table-container {
 	max-height: 60%;
@@ -12,7 +13,7 @@ table {
 	border-collapse: collapse;
 }
 table th {
-	background-color: #4262ff; /*miro primary color*/
+	background-color: var(--miro-blue); /*miro primary color*/
 	color: white;
 	padding: 12px 8px;
 	text-align: left;
@@ -81,30 +82,35 @@ button svg {
 	left: 0px;
 	top: 2px;
 }
-
-.loading::after {
+.loading-small::after, .loading-large::after {
 	-webkit-animation: spinning .5s linear infinite;
     animation: spinning .5s linear infinite;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-left: 2px solid var(--miro-blue);
+    border-bottom: 2px solid var(--miro-blue);
     border-radius: 9999px;
-    border: 2px solid white;
+    border: 2px solid var(--miro-blue);
     border-right: 2px solid transparent;
     border-top: 2px solid transparent;
     content: "";
     display: block;
-    height: 1em;
-    width: 1em;
     left: -webkit-calc(50% - (1em/2));
     left: calc(50% - (1em / 2));
     position: relative;
 }
+.loading-small::after {
+	width: 1rem;
+	height: 1rem;
+}
+.loading-large::after {
+	width: 4rem;
+	height: 4rem;
+}
 @keyframes spinning {
 	from {
-		transform: translate(0deg)
+		transform: rotate(0deg)
 	}
 	to {
-		transform: translate(359deg)
+		transform: rotate(359deg)
 	}
 }
 
@@ -124,4 +130,7 @@ button svg {
 }
 .relative {
 	position: relative;
+}
+.pt-4 {
+	padding-top: 4rem;
 }
