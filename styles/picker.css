@@ -12,7 +12,7 @@ table {
 	border-collapse: collapse;
 }
 table th {
-	background-color: #53565c;
+	background-color: #4262ff; /*miro primary color*/
 	color: white;
 	padding: 12px 8px;
 	text-align: left;
