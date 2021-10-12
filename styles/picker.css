@@ -82,8 +82,7 @@ button svg {
 	top: 2px;
 }
 
-/*taken from mirotone, since miro-btn--loading doesn't seem to do this*/
-.button-loading::after {
+.loading::after {
 	-webkit-animation: spinning .5s linear infinite;
     animation: spinning .5s linear infinite;
     border-left: 2px solid #fff;
@@ -100,7 +99,6 @@ button svg {
     left: calc(50% - (1em / 2));
     position: relative;
 }
-
 @keyframes spinning {
 	from {
 		transform: translate(0deg)
