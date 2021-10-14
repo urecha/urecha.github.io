@@ -52,7 +52,8 @@ footer .end {
 	right: 0;
 }
 #datatable {
-	max-height: 60%;
+	max-height: 0%;
+	animation: unfoldFromTopTo60Percent 0.4s ease-out forwards;
 }
 svg {
 	width: 20px;
@@ -82,7 +83,10 @@ button svg {
 	left: 0px;
 	top: 2px;
 }
-.loading-small::after, .loading-large::after {
+.loading-large::after {
+	width: 4rem;
+	height: 4rem;
+
 	-webkit-animation: spinning .5s linear infinite;
     animation: spinning .5s linear infinite;
     border-left: 2px solid var(--miro-blue);
@@ -96,14 +100,6 @@ button svg {
     left: -webkit-calc(50% - (1em/2));
     left: calc(50% - (1em / 2));
     position: relative;
-}
-.loading-small::after {
-	width: 1rem;
-	height: 1rem;
-}
-.loading-large::after {
-	width: 4rem;
-	height: 4rem;
 }
 @keyframes spinning {
 	from {
@@ -133,4 +129,25 @@ button svg {
 }
 .pt-4 {
 	padding-top: 4rem;
+}
+.fade-in {
+	animation: fade-in 0.4s ease-out forwards;
+}
+
+/*keyframes*/
+@keyframes unfoldFromTopTo60Percent {
+	from {
+		max-height: 0%;
+	}
+	to {
+		max-height: 60%;
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
