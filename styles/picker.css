@@ -5,8 +5,7 @@ body {
 	--miro-blue: #4262ff;
 }
 #table-container {
-	max-height: 0%;
-	animation: unfoldFromTopTo60Percent 0.4s ease-out forwards;
+	max-height: 60%;
 }
 table {
 	margin: 1rem;
@@ -132,14 +131,6 @@ button svg {
 }
 
 /*keyframes*/
-@keyframes unfoldFromTopTo60Percent {
-	from {
-		max-height: 0%;
-	}
-	to {
-		max-height: 60%;
-	}
-}
 @keyframes fade-in {
 	from {
 		opacity: 0;
