@@ -5,7 +5,8 @@ body {
 	--miro-blue: #4262ff;
 }
 #table-container {
-	max-height: 60%;
+	max-height: 0%;
+	animation: unfoldFromTopTo60Percent 0.4s ease-out forwards;
 }
 table {
 	margin: 1rem;
@@ -50,10 +51,6 @@ footer {
 footer .end {
 	position: absolute;
 	right: 0;
-}
-#datatable {
-	max-height: 0%;
-	animation: unfoldFromTopTo60Percent 0.4s ease-out forwards;
 }
 svg {
 	width: 20px;
