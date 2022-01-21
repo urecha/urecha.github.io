@@ -135,6 +135,12 @@ button svg {
 .fade-in {
 	animation: fade-in 0.4s ease-out forwards;
 }
+.visible {
+	display: block !important;
+}
+.hidden {
+	display: none !important;
+}
 
 /*keyframes*/
 @keyframes fade-in {
