@@ -123,10 +123,10 @@ button svg {
     height: 92%;
 }
 
-.loading-screen > .loading-large {
+.loading-screen > .loading {
 	position: relative;
     top: 50%;
-    left: 46%;
+    left: 48%;
     transform: translate(-50%,-50%);
 }
 
