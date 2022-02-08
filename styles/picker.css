@@ -16,10 +16,10 @@ body {
 #table-container {
 	position: relative;
     overflow-y: scroll;
-    max-height: 580px;
+    max-height: 320px;
 }
 #table-container #dataTable {
-	border-collapse: seperate;
+	border-collapse: separate;
 }
 #dataTable thead {
 	position: sticky;
