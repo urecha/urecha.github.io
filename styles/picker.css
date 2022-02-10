@@ -12,11 +12,12 @@ body {
 }
 #content {
 	opacity: 0;
+	max-height: 30%;
 }
 #table-container {
 	position: relative;
     overflow-y: scroll;
-    max-height: 320px;
+    max-height: 58%;
 }
 #table-container #dataTable {
 	border-collapse: separate;
@@ -136,20 +137,21 @@ button svg {
 	display: flex;
 	flex-flow: row wrap;
 	margin: 0;
+	max-width: 70%;
 }
 .filter-criteria button {
 	width: auto;
 }
-.filter-criteria .chaining-label {
+.filter-criteria .chaining-label, .filter-criteria .remove-criteria-label {
 	position: relative;
     top: -2px;
 }
 .criteria select {
-	background-color: #e9ecef;
+	background-color: #fff;
     border: none;
 	cursor: pointer;
 }
-.criteria select:active {
+.criteria select:focus-visible {
 	border: none;
 }
 .criteria input {
@@ -157,6 +159,7 @@ button svg {
 }
 .criteria span.input-group-text {
 	padding: 0 !important;
+	background-color: #fff !important;
 }
 
 /*utilities*/
