@@ -119,7 +119,7 @@ button svg {
 }
 
 #cbqlQuery {
-	width: inherit;
+	width: -webkit-fill-available;
 }
 
 /*configuration modal*/
