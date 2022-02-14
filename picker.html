@@ -78,7 +78,9 @@
         </button>
       </div>
       <div id='loadingSpinner' class="pt-4 loading loading-medium" hidden></div>
-      <span id='end-of-content' class="p-4" hidden>No more data.</span>
+      <div id='end-of-content' class="text-center">
+        <span class="p-4 text-muted" hidden>End of stream.</span>
+      </div>
     </div>
     <footer>
       <button id='importButton' class="miro-btn miro-btn--primary miro-btn--small">
@@ -124,6 +126,18 @@
                 </p>
               </div>
               <div id="standardProperties" class="modal-column-body">
+                <div class="property my-2">
+                  <img alt="checked" title="Always enabled" class="ionicon" src="img/checked-box.svg">
+                  <span class="mx-2 text-muted">Summary</span>
+                </div>
+                <div class="property my-2">
+                  <img alt="checked" title="Always enabled" class="ionicon" src="img/checked-box.svg">
+                  <span class="mx-2 text-muted">Description</span>
+                </div>
+                <div class="property my-2">
+                  <img alt="checked" title="Always enabled" class="ionicon" src="img/checked-box.svg">
+                  <span class="mx-2 text-muted">Status</span>
+                </div>
                 <!--js generated content-->
               </div>
             </div>
