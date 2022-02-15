@@ -167,6 +167,10 @@ button svg {
 }
 
 /*utilities*/
+.miro-input--warning {
+	/*bootstrap warning color*/
+	border-color: #ffc107;
+}
 .row {
 	display: flex;
 	flex-flow: row;
