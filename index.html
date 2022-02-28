@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <script src="https://miro.com/app/static/sdk.1.1.js"></script>
-    <script type="module" crossorigin src="/assets/main.b8397fb6.js"></script>
-    <link rel="modulepreload" href="/assets/style.7f2dd081.js">
-    <link rel="stylesheet" href="/assets/style.9e914dbd.css">
-  </head>
-  <body>
-    <div class="grid container">
-      <div class="cs1 ce12">
-        <img src="/assets/welcome.b7b73e7f.png" alt="" />
-      </div>
-      <div class="cs1 ce12">
-        <h1>Great, your app is running locally</h1>
-        <p>
-          You can now create your Developer team to get your app running in
-          Miro.
-        </p>
-      </div>
-      <div class="cs1 ce12">
-        <a
-          class="button button-primary"
-          href="https://developers.miro.com/docs/create-a-developer-team-in-miro"
-          target="_blank"
-        >
-          Create a Developer team
-        </a>
-      </div>
-    </div>
-    
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <!--sync version number with console log in init.ts-->
+  <title>CB-Miro v0.12.0</title>
+  <link type="stylesheet" href="styles/index.css">
+  <style>
+    body {
+      text-align: center;
+      margin: auto;
+    }
+    .cb-logo {
+      margin: 4rem;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+    }
+    .header label {
+      align-self: center;
+    }
+    a {
+      text-decoration: none;
+      color: #06c;
+    }
+    a:hover {
+      color: rgb(2, 88, 174);
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://miro.com/app/static/sdk.1.1.js"></script>
+  <script src="init.js"></script>
+
+  <div class="header">
+    <img class="cb-logo" src="img/codeBeamer-Logo.png"/>
+    <label>
+      &lt;-&gt;
+    </label>
+    <img src="img/miro-Logo.png"/>
+  </div>
+  <h3>
+    codeBeamer synchronizer plugin for Miro v0.12.0
+    <br>
+      by 
+      <a href="https://github.com/max-poprawe">max-poprawe</a>, 
+      <a href="https://github.com/TimMaa">TimMaa</a>, 
+      <a href="https://github.com/urecha">urecha</a>
+    </small>
+  </h3>
+  
+  <p>To install, copy the link of this page and paste it in the URL field under `App-Url` in your Miro app settings.
+    <br>
+    Grant the app the <em>board:write</em> and <em>board:read</em> permissions.
+  </p>
+  
+  <o>For more infos, visit our <a href="https://github.com/max-poprawe/codebeamer-miro">github repo</a></o>
+
+</body>
+
 </html>
