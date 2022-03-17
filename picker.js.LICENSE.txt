@@ -5,6 +5,4 @@
  * Released under the MIT License.
  */
 
-//! TODO if a test-store has been initialized, you might fail here if you use Store.getInstance() again
-
 //! doesn't allow specifying two teams or sprints etc.
